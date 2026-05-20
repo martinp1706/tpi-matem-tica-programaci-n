@@ -40,3 +40,10 @@ for p in valores:
         for r in valores:
             resultado = (p or q) and r
             print(p, q, r, resultado)
+
+def usuario_critico(p, q, r):
+
+    if (p or q) and r:
+        return True
+    else:
+        return False
