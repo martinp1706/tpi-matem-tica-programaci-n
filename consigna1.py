@@ -17,3 +17,26 @@ print(f"Los usuarios que no presentan errores son: {sinErrores}")
 print(f"Los usuarios que usan una sola plataforma son: {resultado}")
 detectados= C - (A | B)
 print(f"Los detectados son: {detectados}")
+#Logica Proporcional 
+todos = A | B | C
+criticos = []
+no_criticos = []
+for usuario in todos:
+    p = usuario in A
+    q = usuario in B
+    r = usuario in C
+    if (p or q) and r:
+        criticos.append(usuario)
+    else:
+        no_criticos.append(usuario)
+print(f"Los usuarios críticos son: {criticos}")
+print(f"Los usuarios no críticos son: {no_criticos}")
+#tabla de verdad 
+print("TABLA DE VERDAD")
+print("p q r resultado")
+valores = [True, False]
+for p in valores:
+    for q in valores:
+        for r in valores:
+            resultado = (p or q) and r
+            print(p, q, r, resultado)
